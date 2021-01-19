@@ -5,6 +5,7 @@ function repeat (arr) {
 }
 
 function reformat (strVal) {
+    // checking for string input type
     if (typeof(strVal) !== 'string') {
         return null;
     }
@@ -13,6 +14,7 @@ function reformat (strVal) {
         .replace(/[aeiou]+/ig, '') // remove vowels
         .toLowerCase();            // convert to lower case
 
+    // convert the first character to upper case
     str = str.charAt(0).toUpperCase() + str.slice(1);
 
     return str;
